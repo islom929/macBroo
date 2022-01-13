@@ -59,7 +59,7 @@ function priceChecking() {
     ramResult.textContent = 8
     memoryResult.textContent = 256
   }else if (memoryBtns[0].classList.contains('btn--active') && ramBtns[1].classList.contains('btn--active')) {
-    memoryBtns[2].classList.add('d-none')
+    memoryBtns[2].classList.remove('d-none')
     ramBtns[0].classList.remove('d-none')
     priceResult.textContent = priceMac.r16m256gb
     ramResult.textContent = 16
