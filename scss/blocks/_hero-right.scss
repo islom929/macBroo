@@ -1,0 +1,164 @@
+
+.hero__right {
+  width: 600px;
+}
+
+.hero-heading__box {
+  padding: 8px;
+}
+
+.hero-right__heading {
+  font-size: 45px;
+}
+
+.hero-text__box span {
+  font-size: 30px;
+  font-weight: 600;
+  color: #555;
+}
+
+.hero__right button {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 16px 10px;
+  background-color: transparent;
+  border-color: rgb(0, 0, 0);
+}
+
+.hero-ram__box button,.hero-memory__box button {
+  width: 181px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.hero-ram__box,.hero-memory__box,.hero-color__box {
+  position: relative;
+  margin-top: 50px;
+  padding: 8px;
+}
+
+.hero-ram__box button:not(:last-child),.hero-memory__box button:not(:last-child),.hero-color__box button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.hero-color__box button:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.hero-ram__box::before {
+  content: 'Ram';
+  position: absolute;
+  top: -30px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.hero-memory__box::before {
+  content: 'Capacity';
+  position: absolute;
+  top: -30px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.hero-color__box {
+  display: flex;
+  flex-wrap: wrap;
+
+  &::before {
+    content: 'Colors';
+    position: absolute;
+    top: -30px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+}
+
+.hero-color__btn {
+  width: 280px;
+  height: 70px;
+  padding: 5px 12px !important;
+  font-size: 12px;
+
+  span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: block;
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+  }
+}
+
+.hero-color__gold {
+  background-color: rgb(210, 157, 0) !important;
+}
+
+.hero-color__silver {
+  background-color: silver !important;
+}
+
+.hero-count__box {
+  margin-left: 8px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #444;
+  border-radius: 8px;
+
+  button {
+    width: 56px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-image: url('../../img/icon-minus.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+  }
+
+  .hero-count__btn-minus {
+    border-right: 1px solid #444;
+  }
+
+  .hero-count__btn-plus {
+    border-left: 1px solid #444;
+    background-image: url('../../img/icon-plus.svg');
+  }
+
+  .hero-count__result {
+    font-size: 23px;
+  }
+}
+
+.hero-price__box {
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 8px;
+}
+
+.hero-bookmark__box {
+  padding: 8px;
+
+  .hero-bookmrak__btn {
+    border: none ;
+    width: 100%;
+    height: 48px;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: rgb(36, 119, 234) ;
+  }
+}
+
+.btn--active {
+  border-color: rgb(36, 119, 234) !important;
+}
