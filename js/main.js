@@ -5,12 +5,13 @@ let countResult = document.querySelector('.hero-count__result')
 const countMinus = document.querySelector('.hero-count__btn-minus')
 const countPlus = document.querySelector('.hero-count__btn-plus')
 const imgChooseBtns = document.querySelectorAll('.hero-img__choose-btn')
-const imgResult = document.querySelector('.hero-img__result')
+const imgResult = document.querySelectorAll('.hero-img__result')
 const colorBtns = document.querySelectorAll('.hero-color__btn')
 const colorBtnImgs = document.querySelectorAll('.hero-img__btn-img')
 const ramResult = document.querySelector('.hero-text__ram')
 const memoryResult = document.querySelector('.hero-text__memory')
 const colorResult = document.querySelector('.hero-text__color')
+const slider = document.querySelector('.hero-img__slider')
 
 ramResult.textContent = 8
 memoryResult.textContent = 256
@@ -36,6 +37,7 @@ ramBtns.forEach(btn => {
   })
 })
 
+
 memoryBtns.forEach(btn => {
   btn.addEventListener('click', evt => {
 
@@ -50,6 +52,7 @@ memoryBtns.forEach(btn => {
     countResult.textContent = 1
   })
 })
+
 
 function priceChecking() {
   if (memoryBtns[0].classList.contains('btn--active') && ramBtns[0].classList.contains('btn--active')) {
@@ -91,10 +94,10 @@ function priceChecking() {
 }
 
 
-
 if (countResult.textContent == 1) {
   countMinus.disabled = true
 }
+
 
 countMinus.addEventListener('click', evt => {
   let countResNum = Number(countResult.textContent)
@@ -114,6 +117,7 @@ countMinus.addEventListener('click', evt => {
 
 })
 
+
 countPlus.addEventListener('click', evt => {
   let countResNum = Number(countResult.textContent)
   countResNum += 1
@@ -127,9 +131,9 @@ countPlus.addEventListener('click', evt => {
   priceResult.textContent = priceResNum * countResNum
 })
 
+
 imgChooseBtns.forEach((btn, ind ) => {
   btn.addEventListener('click', evt => {
-
 
     imgChooseBtns[0].classList.remove('img--active')
     imgChooseBtns[1].classList.remove('img--active')
@@ -137,10 +141,38 @@ imgChooseBtns.forEach((btn, ind ) => {
     imgChooseBtns[3].classList.remove('img--active')
     imgChooseBtns[4].classList.remove('img--active')
 
-
     btn.classList.add('img--active')
+
     imgInd = ind
     imgResult.src = appleArr[colorCount].img[ind]
+
+    if (!document.querySelector('.main').classList.contains('main-full-screen')) {
+      if (imgChooseBtns[0].classList.contains('img--active')) {
+        slider.style.left = 0
+      }else if (imgChooseBtns[1].classList.contains('img--active')) {
+        slider.style.left = `-${500}px`
+      }else if (imgChooseBtns[2].classList.contains('img--active')) {
+        slider.style.left = `-${334 * 3}px`
+      }else if (imgChooseBtns[3].classList.contains('img--active')) {
+        slider.style.left = `-${386 * 4}px`
+      }else if (imgChooseBtns[4].classList.contains('img--active')) {
+        slider.style.left = `-${420 * 5}px`
+      }
+    }
+
+    if (document.querySelector('.main').classList.contains('main-full-screen')) {
+      if (imgChooseBtns[0].classList.contains('img--active')) {
+        slider.style.left = 0
+      }else if (imgChooseBtns[1].classList.contains('img--active')) {
+        slider.style.left = `-${730}px`
+      }else if (imgChooseBtns[2].classList.contains('img--active')) {
+        slider.style.left = `-${460 * 3}px`
+      }else if (imgChooseBtns[3].classList.contains('img--active')) {
+        slider.style.left = `-${540 * 4}px`
+      }else if (imgChooseBtns[4].classList.contains('img--active')) {
+        slider.style.left = `-${580 * 5}px`
+      }
+    }
 
   })
 })
@@ -158,6 +190,9 @@ colorBtns.forEach((btn,ind )=> {
     colorBtnImgs.forEach((b,i) => {
       b.src = appleArr[ind].img[i]
     })
+    imgResult.forEach((i,j) => {
+      i.src = appleArr[ind].img[j]
+    })
 
     if (colorBtns[0].classList.contains('btn--active')) {
       colorCount = 0
@@ -170,8 +205,8 @@ colorBtns.forEach((btn,ind )=> {
 })
 
 document.querySelector('.hero-img__fullscreen-btn').addEventListener('click', evt => {
-  document.querySelector('.hero-img__fullview').classList.add('d-none')
-  document.querySelector('.hero-img__not-fullview').classList.remove('d-none')
+  document.querySelector('.hero-img__fullview').classList.toggle('d-none')
+  document.querySelector('.hero-img__not-fullview').classList.toggle('d-none')
 
   document.querySelector('.main').classList.toggle('main-full-screen')
 

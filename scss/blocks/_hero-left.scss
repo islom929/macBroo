@@ -7,6 +7,7 @@
   width: 577px;
   height: 396px;
   position: relative;
+  overflow: hidden;
   img{
     width: 577px;
     height: 317px;
@@ -42,6 +43,7 @@
   position: absolute;
   top: 80%;
   right: 70px;
+  z-index: 99;
 
   svg {
     width: 30px;
@@ -60,4 +62,18 @@
 
 .d-none {
   display: none;
+}
+
+.hero-img__slider {
+  width: 500px;
+  height: 396px;
+  position: absolute;
+  display: flex;
+  transition: all 0.3s ease;
+
+  img{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
 }
