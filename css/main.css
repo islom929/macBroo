@@ -424,9 +424,9 @@ img {
 }
 
 .main-full-screen .hero__left .hero-img__box .hero-img__result-box {
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
-  width: 770px;
   height: 70vh;
 }
 
@@ -436,10 +436,8 @@ img {
 }
 
 .main-full-screen .hero__left .hero-img__slider {
-  width: 700px;
-  height: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
 }
 
 .main-full-screen .hero__left .hero-img__choose {
@@ -513,8 +511,8 @@ img {
 .hero-img__fullscreen-btn svg {
   width: 30px;
   height: 30px;
-  -webkit-transition: 0.2s ease all;
-  transition: 0.2s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 .hero-img__fullscreen-btn svg path {
@@ -533,7 +531,6 @@ img {
 .hero-img__slider {
   width: 500px;
   height: 396px;
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

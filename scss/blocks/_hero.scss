@@ -15,9 +15,9 @@
       width: 100%;
       height: 70vh;
       .hero-img__result-box {
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
-        width: 770px;
         height: 70vh;
         img {
           width: 120%;
@@ -25,11 +25,9 @@
         }
       }
     }
+
     .hero-img__slider {
-      width: 700px;
-      height: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      transform:translateX(-40px);
     }
 
     .hero-img__choose {

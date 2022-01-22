@@ -148,29 +148,29 @@ imgChooseBtns.forEach((btn, ind ) => {
 
     if (!document.querySelector('.main').classList.contains('main-full-screen')) {
       if (imgChooseBtns[0].classList.contains('img--active')) {
-        slider.style.left = 0
+        slider.style.transform =  `translateX(0)`
       }else if (imgChooseBtns[1].classList.contains('img--active')) {
-        slider.style.left = `-${500}px`
+        slider.style.transform = `translateX(-${500}px)`
       }else if (imgChooseBtns[2].classList.contains('img--active')) {
-        slider.style.left = `-${334 * 3}px`
+        slider.style.transform = `translateX(-${334 * 3}px)`
       }else if (imgChooseBtns[3].classList.contains('img--active')) {
-        slider.style.left = `-${386 * 4}px`
+        slider.style.transform = `translateX(-${386 * 4}px)`
       }else if (imgChooseBtns[4].classList.contains('img--active')) {
-        slider.style.left = `-${420 * 5}px`
+        slider.style.transform = `translateX(-${420 * 5}px)`
       }
     }
 
     if (document.querySelector('.main').classList.contains('main-full-screen')) {
       if (imgChooseBtns[0].classList.contains('img--active')) {
-        slider.style.left = 0
+        slider.style.transform = 'translateX(-40px)'
       }else if (imgChooseBtns[1].classList.contains('img--active')) {
-        slider.style.left = `-${730}px`
+        slider.style.transform = `translateX(-${700}px)`
       }else if (imgChooseBtns[2].classList.contains('img--active')) {
-        slider.style.left = `-${460 * 3}px`
+        slider.style.transform = `translateX(-${460 * 3}px)`
       }else if (imgChooseBtns[3].classList.contains('img--active')) {
-        slider.style.left = `-${540 * 4}px`
+        slider.style.transform = `translateX(-${540 * 4}px)`
       }else if (imgChooseBtns[4].classList.contains('img--active')) {
-        slider.style.left = `-${580 * 5}px`
+        slider.style.transform = `translateX(-${580 * 5}px)`
       }
     }
 

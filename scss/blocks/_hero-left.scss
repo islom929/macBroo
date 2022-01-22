@@ -48,7 +48,7 @@
   svg {
     width: 30px;
     height: 30px;
-    transition: 0.2s ease all;
+    transition: 0.3s ease all;
 
     path {
       color: rgba(138, 136, 136, 0.4);
@@ -67,7 +67,6 @@
 .hero-img__slider {
   width: 500px;
   height: 396px;
-  position: absolute;
   display: flex;
   transition: all 0.3s ease;
 
